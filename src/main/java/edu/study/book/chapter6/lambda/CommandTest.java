@@ -6,7 +6,8 @@ public class CommandTest {
         System.out.println("hot-fix");
         System.out.println("master fix");
         System.out.println("hot-fix2");
-        System.out.println("github commit");
+        System.out.println("hot-fix2");
+        System.out.println("hot-fix2");
         process(new int[]{1, 2, 3}, (int element)->{
             System.out.println(element);
         });
