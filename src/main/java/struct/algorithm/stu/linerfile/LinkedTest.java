@@ -52,10 +52,24 @@ public class LinkedTest {
     }
 
     private Node listByValue(int number){//当前节点
-        return null;
+        Node temp = headNode;
+        while (temp != null){
+            if (temp.number == number)break;
+            temp = temp.next;
+        }
+        return temp;
     }
     private Node listByIndex(int index){//找的前一个节点
-        return null;
+        Node temp = headNode;
+        Node lastTemp = null;
+        int count = 0;
+        while (temp != null) {
+            if (count == index - 1)break;
+            count++;
+            lastTemp = temp;
+            temp = temp.next;
+        }
+        return lastTemp;
     }
     private String getDescription(LinkedTest linkedTest, IteratorTest iteratorTest){
         Node headNode = linkedTest.getHeadNode().next;

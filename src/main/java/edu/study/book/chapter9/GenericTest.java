@@ -21,4 +21,8 @@ public class GenericTest {
 
         FunctionTest<String> functionTest2 = (String s) -> System.out.println(s);
     }
+
+    public static void test02() {
+
+    }
 }

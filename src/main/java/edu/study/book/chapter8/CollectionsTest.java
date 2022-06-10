@@ -1,14 +1,12 @@
 package edu.study.book.chapter8;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class CollectionsTest {
 
     public static void main(String[] args) {
-        test04();
+        test07();
     }
 
     public static void test01(){
@@ -82,5 +80,41 @@ public class CollectionsTest {
         System.out.println(intStream.max().getAsInt());
         //System.out.println(intStream.min().getAsInt());
         //System.out.println(intStream.sum());
+    }
+
+    public static void test06() {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.remove("c");
+        System.out.println(list.size());
+        list.clear();
+        System.out.println(list.size());
+    }
+
+    public static void test07() {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.forEach((obj) -> System.out.println(obj));
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+    public static void test08() {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        final String[] strings = list.stream().toArray(String[]::new);
+        System.out.println(list.stream().filter(ele -> true).count());
+        System.out.println(list.stream());
     }
 }
